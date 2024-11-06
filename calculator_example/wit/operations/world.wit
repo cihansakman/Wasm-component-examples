@@ -1,0 +1,13 @@
+package docs:operations@0.1.0;
+
+//interface for the operations function
+interface operands{
+    add: func(a: u32, b: u32) -> u32;
+    mul: func(a: u32, b: u32) -> u32;
+}
+
+
+//world
+world operation {
+    export operands;
+}

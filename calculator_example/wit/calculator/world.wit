@@ -1,0 +1,21 @@
+package docs:calculator@0.1.0;
+
+interface calculate{
+    enum op {
+        add,
+        mul,
+    }
+
+    eval-exprassion: func(op: op, x:u32, y:u32) -> u32;
+}
+
+//world for the calculator component
+world calculator{
+    import docs:operations/operands@0.1.0;
+    export calculate;
+}
+
+//world for the console app component
+world app {
+    import calculate;
+}
