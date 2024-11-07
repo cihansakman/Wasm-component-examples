@@ -2,3 +2,5 @@
 **/.vscode
 *.swp
 *.swo
+**/*.wasm
+*.pyc
