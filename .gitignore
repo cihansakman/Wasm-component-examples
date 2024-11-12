@@ -1,6 +1,17 @@
+# Ignore build, editor, and swap files
 **/target
 **/.vscode
 *.swp
 *.swo
-**/*.wasm
 *.pyc
+**/__pycache__
+**/myenv
+
+# Ignore .wasm files everywhere
+**/*.wasm
+
+# Specific directories and files in numpy_w_componentize_py
+numpy_w_componentize_py/numpy*
+numpy_w_componentize_py/matrix_math/
+numpy_w_componentize_py/*.wasm
+
