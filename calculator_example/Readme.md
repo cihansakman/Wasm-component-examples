@@ -20,3 +20,8 @@ The `cargo component` targets `wasm32-wasip1` by default. To support WASIp2 it m
 wac plug calculator/target/wasm32-wasip1/release/calculator.wasm --plug adder/target/wasm32-wasip1/release/adder.wasm -o composed.wasm
 wac plug command/target/wasm32-wasip1/release/command.wasm --plug composed.wasm -o final.wasm
 ```
+
+
+### Extra
+
+https://github.com/bytecodealliance/cargo-component/blob/main/docs/design/registries.md#the-target-field helpful to understand Cargo.toml structure

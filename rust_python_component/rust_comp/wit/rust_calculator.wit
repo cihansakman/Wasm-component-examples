@@ -1,0 +1,26 @@
+package component:rust-comp;
+
+/// An example world for the component to target.
+interface rust-example-comp {
+    
+    enum operation {
+        add,
+        sub,
+        mul,
+        
+    }
+
+    record expression {
+        first: u32,
+        operation: operation,
+        second: u32,
+    }
+
+    eval: func(expr: expression) -> u32;
+}
+
+world rust-calculator{
+    export rust-example-comp;
+}
+
+

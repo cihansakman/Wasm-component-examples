@@ -1,0 +1,8 @@
+///WIT for rust_python_component example of python component
+package rust-python:py-calculator;
+
+world py-calculator-main{
+    include wasi:cli/command@0.2.0;
+    import component:rust-comp/rust-calculator;
+    
+}
