@@ -12,6 +12,7 @@ class Operation(Enum):
     SUB = 1
     MUL = 2
     POW = 3
+    DIV = 4
 
 @dataclass
 class Expression:

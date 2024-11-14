@@ -8,6 +8,7 @@ interface rust-example-comp {
         sub,
         mul,
         pow,
+        div,
         
     }
 

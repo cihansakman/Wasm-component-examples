@@ -14,6 +14,13 @@ impl Guest for Component {
             Operation::Sub => l - r,
             Operation::Mul => l * r,
             Operation::Pow => l.pow(r),
+            Operation::Div => {
+                if r != 0 {
+                    l / r
+                } else {
+                    u32::MAX
+                }
+            }
         }
     }
 }

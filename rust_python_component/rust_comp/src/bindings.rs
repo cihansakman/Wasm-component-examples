@@ -17,6 +17,7 @@ pub mod exports {
                     Sub,
                     Mul,
                     Pow,
+                    Div,
                 }
                 impl ::core::fmt::Debug for Operation {
                     fn fmt(
@@ -28,6 +29,7 @@ pub mod exports {
                             Operation::Sub => f.debug_tuple("Operation::Sub").finish(),
                             Operation::Mul => f.debug_tuple("Operation::Mul").finish(),
                             Operation::Pow => f.debug_tuple("Operation::Pow").finish(),
+                            Operation::Div => f.debug_tuple("Operation::Div").finish(),
                         }
                     }
                 }
@@ -42,6 +44,7 @@ pub mod exports {
                             1 => Operation::Sub,
                             2 => Operation::Mul,
                             3 => Operation::Pow,
+                            4 => Operation::Div,
                             _ => panic!("invalid enum discriminant"),
                         }
                     }
@@ -198,14 +201,14 @@ pub(crate) use __export_rust_calculator_impl as export;
 #[cfg(target_arch = "wasm32")]
 #[link_section = "component-type:wit-bindgen:0.31.0:component:rust-comp:rust-calculator:encoded world"]
 #[doc(hidden)]
-pub static __WIT_BINDGEN_COMPONENT_TYPE: [u8; 324] = *b"\
-\0asm\x0d\0\x01\0\0\x19\x16wit-component-encoding\x04\0\x07\xbe\x01\x01A\x02\x01\
-A\x02\x01B\x06\x01m\x04\x03add\x03sub\x03mul\x03pow\x04\0\x09operation\x03\0\0\x01\
-r\x03\x05firsty\x09operation\x01\x06secondy\x04\0\x0aexpression\x03\0\x02\x01@\x01\
-\x04expr\x03\0y\x04\0\x04eval\x01\x04\x04\x01%component:rust-comp/rust-example-c\
-omp\x05\0\x04\x01#component:rust-comp/rust-calculator\x04\0\x0b\x15\x01\0\x0frus\
-t-calculator\x03\0\0\0G\x09producers\x01\x0cprocessed-by\x02\x0dwit-component\x07\
-0.216.0\x10wit-bindgen-rust\x060.31.0";
+pub static __WIT_BINDGEN_COMPONENT_TYPE: [u8; 328] = *b"\
+\0asm\x0d\0\x01\0\0\x19\x16wit-component-encoding\x04\0\x07\xc2\x01\x01A\x02\x01\
+A\x02\x01B\x06\x01m\x05\x03add\x03sub\x03mul\x03pow\x03div\x04\0\x09operation\x03\
+\0\0\x01r\x03\x05firsty\x09operation\x01\x06secondy\x04\0\x0aexpression\x03\0\x02\
+\x01@\x01\x04expr\x03\0y\x04\0\x04eval\x01\x04\x04\x01%component:rust-comp/rust-\
+example-comp\x05\0\x04\x01#component:rust-comp/rust-calculator\x04\0\x0b\x15\x01\
+\0\x0frust-calculator\x03\0\0\0G\x09producers\x01\x0cprocessed-by\x02\x0dwit-com\
+ponent\x070.216.0\x10wit-bindgen-rust\x060.31.0";
 #[inline(never)]
 #[doc(hidden)]
 pub fn __link_custom_section_describing_imports() {
