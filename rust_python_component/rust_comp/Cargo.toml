@@ -12,4 +12,3 @@ crate-type = ["cdylib"]
 [package.metadata.component]
 package = "component:rust-comp"
 
-[package.metadata.component.dependencies]

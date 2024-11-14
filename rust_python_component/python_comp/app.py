@@ -24,7 +24,7 @@ def main(expr):
     
 if __name__ == '__main__':
     if len(sys.argv) != 4:
-        print(f'usage: app.py <operand1> <operand2> <operation: add | sub | mul>')
+        print(f'usage: app.py <operand1> <operand2> <operation: add | sub | mul | pow>')
     else:
         #Create an Expression instance to test 'eval'
         expr = Expression(None, None, None)
@@ -39,8 +39,10 @@ if __name__ == '__main__':
                 expr.operation = Operation.SUB
             case 'mul':
                 expr.operation = Operation.MUL
+            case 'pow':
+                expr.operation = Operation.POW
             case _:
-                print(f'Please enter a valid operation: add | sub | mul')
+                print(f'Please enter a valid operation: add | sub | mul | pow')
         
         if(expr.operation is not None):
             main(expr)            

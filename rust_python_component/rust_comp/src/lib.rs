@@ -13,7 +13,7 @@ impl Guest for Component {
             Operation::Add => l + r,
             Operation::Sub => l - r,
             Operation::Mul => l * r,
-            //Operation::Div => l / r,
+            Operation::Pow => l.pow(r),
         }
     }
 }

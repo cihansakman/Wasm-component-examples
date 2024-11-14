@@ -11,6 +11,7 @@ class Operation(Enum):
     ADD = 0
     SUB = 1
     MUL = 2
+    POW = 3
 
 @dataclass
 class Expression:
